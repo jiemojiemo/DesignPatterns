@@ -4,11 +4,13 @@ class Director
 {
 public:
 	Director(AbstracBuilder* builder) :m_builder(builder) {}
-	void Construct()
+	Product Construct()
 	{
 		m_builder->BuilderPartA();
 		m_builder->BuilderPartB();
 		m_builder->BuilderPartC();
+
+		return m_builder->GetResult();
 	}
 
 private:

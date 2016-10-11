@@ -15,13 +15,13 @@ int main()
 	AbstracBuilder* builder2 = new ConcreteBuilder_2();
 
 	Director dir1(builder1);
-	dir1.Construct();
-	auto product1 = builder1->GetResult();
+	
+	auto product1 = dir1.Construct();
 	ShowResult(product1);
 
 	Director dir2(builder2);
-	dir2.Construct();
-	auto product2 = builder2->GetResult();
+	
+	auto product2 = dir2.Construct();
 	ShowResult(product2);
 
 

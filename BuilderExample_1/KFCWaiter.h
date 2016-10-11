@@ -8,10 +8,11 @@ public:
 	{
 		m_combo = combo;
 	}
-	void Construct()
+	Meal Construct()
 	{
 		m_combo->BuildStaleFood();
 		m_combo->BuildDrink();
+		return m_combo->GetMeal();
 	}
 private:
 	Combo* m_combo;

@@ -19,13 +19,11 @@ int main()
 	Combo* com2 = new Combo_B();
 
 	KFCWaiter waiter(com1);
-	waiter.Construct();
-	auto m1 = com1->GetMeal();
+	auto m1 = waiter.Construct();
 	ShowMeal(m1);
 
 	waiter.SetCombe(com2);
-	waiter.Construct();
-	auto m2 = com2->GetMeal();
+	auto m2 = waiter.Construct();
 	ShowMeal(m2);
 
 	delete com1;
